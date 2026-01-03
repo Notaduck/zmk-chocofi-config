@@ -10,7 +10,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: 040238a97dfb55ad84867c007944809425f1befe # main-2024/12/17 - Zephyr 4.1 support
       import: app/west.yml
     - name: zmk-nice-oled
       remote: mctechnology17
