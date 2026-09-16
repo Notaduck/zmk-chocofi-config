@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: corne, layout_name: five_column_transform}
 layers:
-  base:
-  - {t: Q, h: fn}
+  BASE:
+  - {t: Q, h: FN}
   - W
   - E
   - R
@@ -15,7 +15,7 @@ layers:
   - '&hml LCTRL S'
   - '&hml LALT D'
   - '&hml LGUI F'
-  - {t: G, h: number}
+  - {t: G, h: NUM}
   - H
   - '&hmr RGUI J'
   - '&hmr RALT K'
@@ -32,12 +32,12 @@ layers:
   - .
   - /
   - $$mdi:apple-keyboard-shift$$
-  - {t: '$$mdi:keyboard-tab$$', h: navigation}
+  - {t: '$$mdi:keyboard-tab$$', h: NAV}
   - '&hml LC(LS(LALT)) SPACE'
   - ⮐
-  - {t: Esc, h: symbol}
+  - {t: Esc, h: SYM}
   - {t: BSPC, s: DEL}
-  number:
+  NUM:
   - ''
   - ''
   - ''
@@ -74,7 +74,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  symbol:
+  SYM:
   - '!'
   - '@'
   - '#'
@@ -111,8 +111,8 @@ layers:
   - ''
   - {type: held}
   - ''
-  fn:
-  - {t: base, h: sticky, type: held}
+  FN:
+  - {t: BASE, h: sticky, type: held}
   - {t: '$$mdi:keyboard$$', s: '$$mdi:usb$$', type: sym_by_sym}
   - {t: '$$mdi:keyboard$$', s: '$$mdi:bluetooth$$', type: sym_by_sym}
   - ''
@@ -148,7 +148,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  navigation:
+  NAV:
   - ''
   - ''
   - ''
@@ -188,7 +188,7 @@ layers:
 combos:
 - p: [16, 17]
   k: ':'
-  l: [base]
+  l: [BASE]
 - p: [12, 13]
   k: '&smart_shift'
-  l: [base]
+  l: [BASE]
