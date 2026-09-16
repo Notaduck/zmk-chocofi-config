@@ -3,5 +3,4 @@ include:
   - board: nice_nano//zmk
     shield: corne_right nice_view_adapter nice_epaper
     snippet: zmk-usb-logging
-    cmake-args: -DCONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_SPACEMAN=n -DCONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_CAT=y
-    artifact-name: right-D-instrumented
+    artifact-name: right-E-spaceman-3s
