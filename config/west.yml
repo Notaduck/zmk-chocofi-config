@@ -4,8 +4,10 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
-    - name: mctechnology17
-      url-base: https://github.com/mctechnology17
+    # zmk-nice-oled fork with Zephyr 4.1 / LVGL 9 support, see
+    # https://github.com/mctechnology17/zmk-nice-oled/pull/37
+    - name: tokyo2006
+      url-base: https://github.com/tokyo2006
 
   projects:
     - name: zmk
@@ -13,8 +15,8 @@ manifest:
       revision: main
       import: app/west.yml
     - name: zmk-nice-oled
-      remote: mctechnology17
-      revision: main
+      remote: tokyo2006
+      revision: "4.0"
     - name: zmk-helpers
       remote: urob
       revision: main
