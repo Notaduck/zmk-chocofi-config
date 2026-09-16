@@ -166,6 +166,10 @@ config NICE_OLED_WIDGET_STATIC_IMAGE_PERIPHERAL_VIM
     bool "Enable static vim on peripheral"
     default n
 
+config NICE_OLED_WIDGET_STATIC_IMAGE_PERIPHERAL_SPACEMAN
+    bool "Enable static spaceman frame on peripheral"
+    default n
+
 config NICE_OLED_WIDGET_STATIC_IMAGE_PERIPHERAL_VIP_MARCOS
 bool "Enable static vim_marcos on peripheral"
     default n
