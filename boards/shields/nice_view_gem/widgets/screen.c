@@ -190,6 +190,9 @@ int zmk_widget_screen_init(struct zmk_widget_screen *widget, lv_obj_t *parent) {
     lv_canvas_set_buffer(bottom, widget->cbuf3, CANVAS_SIZE, CANVAS_SIZE, CANVAS_COLOR_FORMAT);
 
     sys_slist_append(&widgets, &widget->node);
+    // The middle canvas has no listener anymore (WPM removed); paint it once
+    // so it doesn't display uninitialized buffer contents.
+    draw_middle(widget->obj, &widget->state);
     widget_battery_status_init();
     widget_layer_status_init();
     widget_output_status_init();
