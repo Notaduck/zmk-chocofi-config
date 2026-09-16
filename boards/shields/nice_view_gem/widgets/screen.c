@@ -55,6 +55,7 @@ static void draw_bottom(lv_obj_t *widget, const struct status_state *state) {
     fill_background(canvas);
 
     // Draw widgets
+    draw_profile_status(canvas, state);
     draw_layer_status(canvas, state);
 
     // Rotate for horizontal display
