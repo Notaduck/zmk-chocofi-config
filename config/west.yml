@@ -4,18 +4,12 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
-    - name: m165437
-      url-base: https://github.com/m165437
 
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    # ZMK main (Zephyr 4.1+) -> use the main branch, per the module's README
-    - name: nice-view-gem
-      remote: m165437
-      revision: main
     - name: zmk-helpers
       remote: urob
       revision: main
