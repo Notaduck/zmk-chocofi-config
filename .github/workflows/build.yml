@@ -1,9 +1,10 @@
 name: Build Workflow
 
 on:
-  push: 
-    branches: 
+  push:
+    branches:
       - main  # Specify your main branch
+      - nice-oled-41  # temporary: nice_oled Zephyr 4.1 debugging branch
   pull_request: 
     branches: 
       - main  # Specify your main branch
