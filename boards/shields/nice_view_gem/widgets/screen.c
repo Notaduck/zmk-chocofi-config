@@ -55,7 +55,6 @@ static void draw_bottom(lv_obj_t *widget, const struct status_state *state) {
     fill_background(canvas);
 
     // Draw widgets
-    draw_profile_status(canvas, state);
     draw_layer_status(canvas, state);
 
     // Rotate for horizontal display
@@ -171,6 +170,8 @@ ZMK_SUBSCRIPTION(widget_output_status, zmk_ble_active_profile_changed);
  * Initialization
  **/
 
+LV_IMG_DECLARE(spaceman_08);
+
 int zmk_widget_screen_init(struct zmk_widget_screen *widget, lv_obj_t *parent) {
     widget->obj = lv_obj_create(parent);
     lv_obj_set_size(widget->obj, SCREEN_HEIGHT, SCREEN_WIDTH);
@@ -193,6 +194,13 @@ int zmk_widget_screen_init(struct zmk_widget_screen *widget, lv_obj_t *parent) {
     // The middle canvas has no listener anymore (WPM removed); paint it once
     // so it doesn't display uninitialized buffer contents.
     draw_middle(widget->obj, &widget->state);
+
+    // Static spaceman over the middle band. Placed as an LVGL image object in
+    // display (landscape) coordinates so it renders upright, unlike canvas
+    // content which is drawn pre-rotation.
+    lv_obj_t *art = lv_img_create(widget->obj);
+    lv_img_set_src(art, &spaceman_08);
+    lv_obj_align(art, LV_ALIGN_CENTER, 0, 0);
     widget_battery_status_init();
     widget_layer_status_init();
     widget_output_status_init();
