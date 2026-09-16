@@ -1,0 +1,8 @@
+config SHIELD_NICE_OLED
+    def_bool $(shields_list_contains,nice_oled)
+
+config SHIELD_NICE_EPAPER
+    def_bool $(shields_list_contains,nice_epaper)
+
+config SHIELD_NICE_CUSTOM
+    def_bool $(shields_list_contains,nice_custom)

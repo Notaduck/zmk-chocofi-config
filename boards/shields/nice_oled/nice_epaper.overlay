@@ -1,0 +1,29 @@
+/*
+ * Copyright (c) 2022 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+// don't work XD!
+// #include"boards/vikoto.dtsi"
+
+&nice_view_spi {
+    status = "okay";
+    nice_view: ls0xx@0 {
+        compatible = "sharp,ls0xx";
+        spi-max-frequency = <1000000>;
+        reg = <0>;
+        width = <160>;  // epaper: 160 vista508: 144 vista2070: 400
+        height = <68>; // epaper: 68  vista508: 168 vista2070: 240
+        // VCOM properties required by the Zephyr 4.1 sharp,ls0xx driver,
+        // matching ZMK's stock nice_view overlay
+        serial-vcom-inversion;
+        serial-vcom-interval = <33>;
+    };
+};
+
+/ {
+    chosen {
+        zephyr,display = &nice_view;
+    };
+};
