@@ -154,11 +154,11 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - DEL
+  - $$mdi:volume-mute$$
+  - $$mdi:volume-minus$$
+  - $$mdi:volume-plus$$
+  - $$mdi:skip-backward$$
+  - $$mdi:skip-forward$$
   - CAPS
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
