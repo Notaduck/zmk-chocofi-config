@@ -1,6 +1,8 @@
 #include "util.h"
 #include <ctype.h>
 #include <zephyr/kernel.h>
+#include <zephyr/logging/log.h>
+LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 void to_uppercase(char *str) {
   for (int i = 0; str[i] != '\0'; i++) {
@@ -9,6 +11,7 @@ void to_uppercase(char *str) {
 }
 
 void rotate_canvas(lv_obj_t *canvas) {
+  LOG_WRN("NICEOLED: rotate_canvas enter");
   uint8_t *buf = lv_canvas_get_draw_buf(canvas)->data;
   static uint8_t buf_copy[CANVAS_BUF_SIZE];
   memcpy(buf_copy, buf, sizeof(buf_copy));

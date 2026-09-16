@@ -3,15 +3,5 @@ include:
   - board: nice_nano//zmk
     shield: corne_right nice_view_adapter nice_epaper
     snippet: zmk-usb-logging
-    cmake-args: -DCONFIG_ZMK_DISPLAY=n -DCONFIG_NICE_OLED_WIDGET_STATUS=n
-    artifact-name: right-A-nodisplay
-  - board: nice_nano//zmk
-    shield: corne_right nice_view_adapter nice_epaper
-    snippet: zmk-usb-logging
-    cmake-args: -DCONFIG_ZMK_DISPLAY_STATUS_SCREEN_BUILT_IN=y -DCONFIG_ZMK_DISPLAY_STATUS_SCREEN_CUSTOM=n -DCONFIG_NICE_OLED_WIDGET_STATUS=n
-    artifact-name: right-B-builtin-screen
-  - board: nice_nano//zmk
-    shield: corne_right nice_view_adapter nice_epaper
-    snippet: zmk-usb-logging
     cmake-args: -DCONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_SPACEMAN=n -DCONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_CAT=y
-    artifact-name: right-C-full-cat
+    artifact-name: right-D-instrumented

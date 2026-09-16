@@ -139,9 +139,12 @@ ZMK_SUBSCRIPTION(widget_peripheral_status, zmk_split_peripheral_status_changed);
  **/
 
 int zmk_widget_screen_init(struct zmk_widget_screen *widget, lv_obj_t *parent) {
+    LOG_WRN("NICEOLED: peri init: obj create");
     widget->obj = lv_obj_create(parent);
     lv_obj_set_size(widget->obj, CANVAS_HEIGHT, CANVAS_WIDTH);
 
+    LOG_WRN("NICEOLED: peri init: canvas create/set_buffer (buf=%p size=%d)",
+            (void *)widget->cbuf, (int)sizeof(widget->cbuf));
     lv_obj_t *canvas = lv_canvas_create(widget->obj);
     lv_obj_align(canvas, LV_ALIGN_TOP_LEFT, 0, 0);
     lv_canvas_set_buffer(canvas, widget->cbuf, CANVAS_HEIGHT, CANVAS_HEIGHT, LV_COLOR_FORMAT_L8);
@@ -149,10 +152,15 @@ int zmk_widget_screen_init(struct zmk_widget_screen *widget, lv_obj_t *parent) {
     sys_slist_append(&widgets, &widget->node);
 
 #if !IS_ENABLED(CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_SMART_BATTERY)
+    LOG_WRN("NICEOLED: peri init: draw_animation");
     draw_animation(canvas, widget);
+    LOG_WRN("NICEOLED: peri init: draw_animation done");
 #endif
+    LOG_WRN("NICEOLED: peri init: battery widget");
     widget_battery_status_init();
+    LOG_WRN("NICEOLED: peri init: peripheral status widget");
     widget_peripheral_status_init();
+    LOG_WRN("NICEOLED: peri init: listeners done");
 
 #if IS_ENABLED(CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_WPM)
     zmk_widget_luna_init(&luna_widget, canvas);
