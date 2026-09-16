@@ -2,5 +2,7 @@
 include:
   - board: nice_nano//zmk
     shield: corne_right nice_view_adapter nice_epaper
+    snippet: zmk-usb-logging
   - board: nice_nano//zmk
     shield: corne_left nice_view_adapter nice_epaper
+    snippet: zmk-usb-logging
