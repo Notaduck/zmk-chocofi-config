@@ -141,8 +141,8 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
 / {
   keymap {
     compatible = "zmk,keymap";
-    base_layer { 
-
+    base_layer {
+      display-name = "BASE";
       bindings = <
         // ╭──────────────────────────────────────────────────────────────[...]
         // │     Q     │     W     │     E     │    R      │     T     │   │     Y     │     U    YM │     I     │     O     │     P     │
@@ -159,8 +159,8 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
         //                         ╰───────────────────────────────────╯   ╰────────────────[...]
       >;
     };
-    number_layer { 
-
+    number_layer {
+      display-name = "NUM";
       bindings = <
         // ╭───────────────────────────────────────────────────────────╮   ╭[...]
         // │     _     │     _     │     _     │     _     │     _     │   │     _     │     _     │     _     │     _     │     _     │
@@ -178,7 +178,7 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
       >;
     };
     symbol_layer {
-
+      display-name = "SYM";
       bindings = <
         // ╭───────────────────────────────────────────────────────────╮   ╭[...]
         // │     _     │     _     │     _     │     _     │     _     │   │     _     │     _     │     _     │     _     │     _     │
@@ -196,8 +196,8 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
       >;
     };
 
-    fn { 
-
+    fn {
+      display-name = "FN";
       bindings = <
         // ╭───────────────────────────────────────────────────────────╮   ╭[...]
         // │     _     │     _     │     _     │     _     │     _     │   │     _     │     _     │     _     │     _     │     _     │
@@ -214,8 +214,8 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
         //                         ╰───────────────────────────────────╯   ╰────────────────[...]
       >;
     };
-    navigation_layer { 
-
+    navigation_layer {
+      display-name = "NAV";
       bindings = <
         // ╭───────────────────────────────────────────────────────────╮   ╭[...]
         // │     _     │     _     │     _     │     _     │     _     │   │   MUTE    │ VOL_DOWN  │  VOL_UP   │ PREV_SONG │ NEXT_SONG │
