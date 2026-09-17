@@ -27,6 +27,7 @@ if(CONFIG_ZMK_DISPLAY AND CONFIG_NICE_OLED_WIDGET_STATUS)
     endif()
 
     zephyr_library_sources(custom_status_screen.c)
+    zephyr_library_sources(crash_breadcrumb.c)
     zephyr_library_sources(assets/images.c)
 
     if(CONFIG_NICE_OLED_WIDGET_CENTRAL_SHOW_BATTERY_PERIPHERAL_ALL OR CONFIG_NICE_OLED_WIDGET_CENTRAL_SHOW_BATTERY_PERIPHERAL_ONLY OR CONFIG_NICE_OLED_WIDGET_CENTRAL_SHOW_BATTERY_PERIPHERAL_AND_CENTRAL)
