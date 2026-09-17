@@ -37,6 +37,12 @@
 
 #define MEH LC(LS(LALT))
 
+// layer-taps: same feel as the HRMs (balanced + quick-tap repeat)
+&lt {
+    flavor = "balanced";
+    quick-tap-ms = <QUICK_TAP_MS>;
+};
+
 // tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
 ZMK_MOD_MORPH(smart_shift,
     bindings = <&sk LSHFT>, <&caps_word>;
@@ -50,7 +56,7 @@ ZMK_BEHAVIOR(hml, hold_tap,
     quick-tap-ms = <QUICK_TAP_MS>;
     require-prior-idle-ms = <PRIOR_IDLE_MS>;
     bindings = <&kp>, <&kp>;
-    hold-trigger-key-positions = <LEFT_KEYS THUMB_KEYS>;
+    hold-trigger-key-positions = <RIGHT_KEYS THUMB_KEYS>;
     hold-trigger-on-release;
 )
 
@@ -61,7 +67,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     quick-tap-ms = <QUICK_TAP_MS>;
     require-prior-idle-ms = <PRIOR_IDLE_MS>;
     bindings = <&kp>, <&kp>;
-    hold-trigger-key-positions = <RIGHT_KEYS THUMB_KEYS>;
+    hold-trigger-key-positions = <LEFT_KEYS THUMB_KEYS>;
     hold-trigger-on-release;
 )
 
@@ -72,7 +78,7 @@ ZMK_BEHAVIOR(hml_s, hold_tap,
     quick-tap-ms = <175>;                // repeat on tap-into-hold
     require-prior-idle-ms = <150>;         // requires PR #1387
     bindings = <&kp>, <&kp>;
-    hold-trigger-key-positions = <LEFT_KEYS THUMB_KEYS>;
+    hold-trigger-key-positions = <RIGHT_KEYS THUMB_KEYS>;
     // hold-trigger-on-release;             // delay positional check until key-release
 )
 
@@ -83,7 +89,7 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
     quick-tap-ms = <175>;                // repeat on tap-into-hold
     require-prior-idle-ms = <150>;         // requires PR #1387
     bindings = <&kp>, <&kp>;
-    hold-trigger-key-positions = <RIGHT_KEYS THUMB_KEYS>;
+    hold-trigger-key-positions = <LEFT_KEYS THUMB_KEYS>;
     // hold-trigger-on-release;             // delay positional check until key-release
 )
 
@@ -154,7 +160,7 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
         // │     Z     │     X     │     C     │     V     │     B     │   │     N     │     M     │    ,/;    │    ./:    │     /     │
                &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M     &kp COMMA     &kp DOT      &kp FSLH
         // ╰───────────┼───────────┼───────────┼───────────┼───────────╯   ╰[...]
-                                     &kp LSHIFT  &lt NAV TAB  &hml MEH SPACE         _RET_    &lt SYM ESC    &SBD 
+                                     &kp LSHIFT  &lt NAV TAB  &hm MEH SPACE         _RET_    &lt SYM ESC    &SBD 
         //                         │                                   │   │                                   │
         //                         ╰───────────────────────────────────╯   ╰────────────────[...]
       >;
