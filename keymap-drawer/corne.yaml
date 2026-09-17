@@ -11,7 +11,7 @@ layers:
   - I
   - O
   - P
-  - '&hml LSHIFT A'
+  - '&hml_s LSHIFT A'
   - '&hml LCTRL S'
   - '&hml LALT D'
   - '&hml LGUI F'
@@ -20,7 +20,7 @@ layers:
   - '&hmr RGUI J'
   - '&hmr RALT K'
   - '&hmr RCTRL L'
-  - '&hmr RSHIFT SEMI'
+  - '&hmr_s RSHIFT SEMI'
   - Z
   - X
   - C
