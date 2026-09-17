@@ -33,7 +33,7 @@ layers:
   - /
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:keyboard-tab$$', h: NAV}
-  - '&hml LC(LS(LALT)) SPACE'
+  - {t: '$$mdi:keyboard-space$$', h: 'Ctl+Sft+$$mdi:apple-keyboard-option$$'}
   - ⮐
   - {t: Esc, h: SYM}
   - {t: BSPC, s: DEL}
