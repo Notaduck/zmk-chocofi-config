@@ -11,8 +11,8 @@ static struct zmk_widget_screen screen_widget;
 #endif
 
 lv_obj_t *zmk_display_status_screen() {
-    LOG_WRN("NICEOLED: deferring widget init 3s past boot races");
-    k_sleep(K_SECONDS(3));
+    LOG_WRN("NICEOLED: deferring widget init 500ms");
+    k_sleep(K_MSEC(500));
     LOG_WRN("NICEOLED: creating screen object");
     lv_obj_t *screen;
     screen = lv_obj_create(NULL);
