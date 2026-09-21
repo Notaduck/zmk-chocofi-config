@@ -27,14 +27,6 @@ config LV_Z_MEM_POOL_SIZE
 config ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
     imply NICE_VIEW_WIDGET_STATUS
 
-config NICE_VIEW_GEM_WPM_FIXED_RANGE
-    bool "Enable fixed range for WPM gauge/chart"
-    default y
-
-config NICE_VIEW_GEM_WPM_FIXED_RANGE_MAX
-    int "Fixed range maximum for WPM gauge/chart"
-    default 100
-
 config NICE_VIEW_GEM_ANIMATION
     bool "Enable animation on peripheral"
     default y
